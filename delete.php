@@ -1,7 +1,11 @@
 <?php 
 include 'db.php';
 
-extract($_GET);
+$ee = extract($_GET);
+print_r($ee);
 
-$id = $_GET['id'];
-echo $id;
+$id = $_GET['studentId'];
+
+$query = "DELETE FROM student WHERE id='$id'";
+$result = mysqli_query($conn, $query);
+ 

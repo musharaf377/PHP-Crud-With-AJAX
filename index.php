@@ -25,7 +25,7 @@
                         Add New
                     </button>
 
-                    <!-- Modal -->
+                    <!-- Insert Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
                         <div class="modal-dialog">
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                     </div>
-                    <table class="table">
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -65,6 +65,33 @@
                             
                         </tbody>
                     </table>
+
+                    <!-- Update Modal -->
+                    <div class="modal fade" id="update-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Update Student Information</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <input type="text" name="name" placeholder="Enter Your Name" class="form-control mb-2" id="name">
+                                        <input type="email" name="email" placeholder="Enter Your Email" class="form-control mb-2" id="email">
+                                        <input type="text" name="depertment" placeholder="Enter Your Depertment" class="form-control" id="depertment">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" onclick="updateStudentData()" class="btn btn-primary">Update Student</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

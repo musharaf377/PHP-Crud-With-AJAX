@@ -11,9 +11,8 @@ while($row = mysqli_fetch_assoc($result)){ ?>
         <td><?php echo $row['name']; ?></td>
         <td><?php echo $row['email']; ?></td>
         <td><?php echo $row['department']; ?></td>
-        <td class="btn btn-outline-primary m-3" onclick="studentEdit('<?php echo $row['id']; ?>')">Edit</td>
-        <td class="btn btn-outline-danger" onclick="studentDelete(1)">Delete</td>
-
+        <td><button class="btn btn-outline-primary m-3" onclick="studentEdit('<?php echo $row['id']; ?>')">Edit</button></td>
+        <td><button class="btn btn-outline-danger" onclick="studentDelete(<?php echo $row['id']; ?>)">Delete</button></td>
     </tr>
 
 <?php }

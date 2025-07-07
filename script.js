@@ -37,13 +37,29 @@ function studentDetailsDisplay(){
 
 // Data Delete
 function studentDelete(id){
+    if(!confirm('Are you sure?')){
+        return;
+    }
+    // alert(id);
     $.ajax({
         url: 'delete.php',
         method: 'get',
-        data: {id:id},
+        data: {
+            studentId:id,
+        },
         success: function(data){
-            console.log(data);
+            studentDetailsDisplay();
             
         }
     })
+}
+
+// update data
+function studentEdit(id){
+    $("#update-modal").modal('show');
+
+    $name = $("#name").val();
+    console.log($name);
+    
+
 }

@@ -78,9 +78,10 @@
                                 </div>
                                 <div class="modal-body">
                                     <form>
-                                        <input type="text" name="name" placeholder="Enter Your Name" class="form-control mb-2" id="name">
-                                        <input type="email" name="email" placeholder="Enter Your Email" class="form-control mb-2" id="email">
-                                        <input type="text" name="depertment" placeholder="Enter Your Depertment" class="form-control" id="depertment">
+                                        <input type="text" name="name" placeholder="Enter Your Name" class="form-control mb-2" id="upname">
+                                        <input type="email" name="email" placeholder="Enter Your Email" class="form-control mb-2" id="upemail">
+                                        <input type="text" name="depertment" placeholder="Enter Your Depertment" class="form-control" id="updepertment">
+                                        <input type="hidden" id="hiddenId">
                                     </form>
                                 </div>
                                 <div class="modal-footer">

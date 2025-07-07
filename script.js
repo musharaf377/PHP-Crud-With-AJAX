@@ -20,7 +20,8 @@ function addStudentData() {
             studentDetailsDisplay();
             
         }
-    })
+    });
+    $("#exampleModal").modal('hide');
 }
 
 // Data Showing
@@ -57,9 +58,45 @@ function studentDelete(id){
 // update data
 function studentEdit(id){
     $("#update-modal").modal('show');
+    var hiddenId = $("#hiddenId").val(id);
+    $.ajax({
+        url: 'edit.php',
+        method: 'get',
+        data: {
+            id: id,
+        },
+        success: function(data){
+            var userInfo = JSON.parse(data);
+            $('#upname').val(userInfo.name);
+            $('#upemail').val(userInfo.email);
+            $('#updepertment').val(userInfo.department);
+      
+            
+        }
+    })
+}
 
-    $name = $("#name").val();
-    console.log($name);
-    
+// Data Update
+function updateStudentData(){
+    var hiddenId = $("#hiddenId").val();
+    var name = $('#upname').val();
+    var email = $('#upemail').val();
+    var depertment = $('#updepertment').val();
+     
+     $.ajax({
+        url:"updateStudent.php",
+        method: "post",
+        data: {
+            id : hiddenId,
+            name: name,
+            email: email,
+            depertment: depertment,
+        },
+        success: function(data){
+            studentDetailsDisplay();
+            
+        }
 
+     });
+     $("#update-modal").modal('hide');
 }

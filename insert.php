@@ -1,5 +1,6 @@
 <?php include 'db.php';
 
+// Data Insert
 $ext = extract($_POST);
 
 print_r($ext);
@@ -16,6 +17,8 @@ if(isset($stName) && isset($stEmail) && isset($stDept) ){
      $query = mysqli_query($conn, $insert); 
 
 }
+
+
 
 
 

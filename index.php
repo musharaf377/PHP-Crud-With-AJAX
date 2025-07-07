@@ -50,23 +50,20 @@
                             </div>
                         </div>
                     </div>
-                    <table>
-                        <tr>
-                            <th>No</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>email</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Musharaf</td>
-                            <td>Hossain</td>
-                            <td>musharaf@gmail.com</td>
-                            <td><a href="">Edit</a></td>
-                            <td><a href="">Delete</a></td>
-                        </tr>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>First name</th>
+                                <th>Last name</th>
+                                <th>email</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-tbody">
+                            
+                        </tbody>
                     </table>
                 </div>
             </div>
